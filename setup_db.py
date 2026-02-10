@@ -1,10 +1,10 @@
 import sqlite3
 
-# Step 1: Connect to database (illatti auto create aagum)
+# Step 1: Connect to database 
 conn = sqlite3.connect("hospital.db")
 cur = conn.cursor()
 
-# Step 2: prescriptions table create pannradhu
+# Step 2: prescriptions table create 
 cur.execute("""
 CREATE TABLE IF NOT EXISTS prescriptions (
     patient_id TEXT PRIMARY KEY,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS prescriptions (
 )
 """)
 
-# Step 3: Sample data insert pannradhu
+# Step 3: Sample data insert 
 cur.executemany("""
 INSERT OR REPLACE INTO prescriptions
 (patient_id, medicine_code, high_risk, verified)
